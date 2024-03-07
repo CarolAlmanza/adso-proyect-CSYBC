@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="login.css"/>
+    
+</head>
+<body>
+    
+    
+    <div class="container">
+        
+        <div class="info">
+           
+            <p class="txt-1"> 
+                <br>
+                <br>
+                BIENVENIDO</p>
+                <br>
+                <br>
+                <H2>SIA - CS&BC</H2>
+                <hr/>
+            
+            <p class="txt-2"> Para ingresar a la plataforma ingresa tu login de usario
+                
+                </p>
+           
+        </div>
+        <form id="loginform" class="form">
+            <h2>Entra a 
+                <br>
+                SIA-CS&BC</h2>
+            <p>
+                Ingresa tu usuario y contraseña para ingresar a la plataforma
+            </p>
+
+    
+            <div class="inputs">
+                                
+                <label>Usuario</label>
+                <input type="text" class="box" placeholder="Ingresa tu usuario" id="usuario" required autofocus>
+                <br>
+                <label>Contraseña</label>
+                <input type="text" class="box" placeholder="Ingresa tu contraseña" id="contraseña" required>
+    
+                <a href="registro.html">Registrate</a>
+
+                <input type="submit" class="button" value="Entrar" id="ingresar" onclick="ingreso()"> 
+                           
+                
+                </form>
+
+                
+                
+            </div>
+
+
+        </form>
+
+        <script src="login.js"></script>
+
+    </div>
+    
+</body>
+</html>

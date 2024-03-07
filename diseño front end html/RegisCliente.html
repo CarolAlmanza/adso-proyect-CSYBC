@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0, user-scalable = yes, width = device-width">
+    <title>Panel Terapeuta</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="RegisCliente.css"/>
+    <script src="RegisCliente.js"></script>
+</head>
+<body>
+    <nav>
+        <nav class="cajaNav">
+            <div class="titNav">
+              <div class="logo"><img src="assets\tarjeta Caroline S&B2.jpg" align="left" width="20%" height="20%"></div>
+              <div class="toggle" onclick="alternar('menu')">Abrir</div>
+            </div>
+            <ul class="barNav cerrado" id="menu"> 
+              <li><a href="#"><i class='bx bx-search-alt' ></i>Buscar Cliente</a></li>
+              <li><a href="#"><i class='bx bx-file'></i> Contrato</a></li>
+              <li><a href="#"><i class='bx bxs-file-image'></i> Encuesta</a></li>
+              <li><a href="panel.html"><i class='bx bx-log-out' ></i>Regresar</a></li>
+            </ul>
+          </nav>
+
+     </nav>
+     <div class="container">
+        
+        <form id="RegisClienteform" class="form">
+            
+            <h2>Registro Inicial del cliente</h2>
+            <br>
+            <h4>Ingresa la informacion del cliente</h4>
+            <br>
+            <br>
+
+            <div class="inputs">
+
+                <label>Fecha de registro</label>
+                <input type="datetime-local" class="box" placeholder="Fecha de registro" id="regisDate" name="daytime" required>
+                
+                <div class="cajas">
+                    <h4>1. Datos personales</h4>
+                                                 
+                    <div class="caja1">
+                   
+                        
+                        <label>Primer Apellido:</label>
+                        <input type="text" class="box" placeholder="Primer apellido" id="firstLastname" required autofocus>
+                        
+                        <label >Segundo Apellido</label> 
+                        <input type="text" class="box" placeholder="Segundo apellido" id="seconLastname" required>
+                        
+                        <label>Primer nombre</label>
+                        <input type="text" class="box" placeholder="Primer nombre" id="firstName" required>
+                        
+                        <label>Segundo nombre</label>
+                        <input type="text" class="box" placeholder="Segundo nombre" id="secondName">
+                        
+                        <label>Tipo de documento</label>
+                        <select option name="Tipo de documento">
+                            <option>Cedula de ciudadania</option>
+                            <option>Cedula de extranjeria</option>
+                            <option>Pasaporte</option>
+                            <option>Tarjeta de identidad</option>
+                            <option>PEP</option>
+                         </select>
+                         
+                         <label>Numero de documento</label>
+                        <input type="number" class="box" placeholder="Numero de documento" id="numberID" minlength="5" maxlength="10" min="10000" max="999999999" required>
+                        
+                        <label>Fecha de nacimiento</label>
+                        <input type="date" class="box" placeholder="Fecha de nacimiento" id="btday" name="btday" required>
+                        
+                        <label>Numero de contacto</label>
+                        <input type="tel" class="box" placeholder="Numero de contacto" id="phone" name="phone" required>
+                        
+                        <label>Genero</label>
+                        <select option name="Genero">
+                            <option>Masculino</option>
+                            <option>Femenino</option>
+                            <option>Otro</option>                            
+                                
+                        </select>
+                        
+                        <label>Direccion</label>
+                        <input type="text" class="box" placeholder="Direccion" id="adress" required>
+                        
+                        <label>Barrio</label>
+                        <input type="text" class="box" placeholder="Barrio" id="neighborhood" required>
+                        
+                        <label>e-mail</label>
+                        <input type="email" class="box" placeholder="correo electronico" id="email" name="email" required>
+                        
+                        
+                    </div>
+                     
+                    <div class="caja2"> 
+                        <h3>Terapia de interes</h3>
+                        <select option name="typeTerapy">
+                            <option>Facial rejuvenecimiento</option>
+                            <option>Abdomen reduccion</option>
+                            <option>Abdomen estrias</option>
+                        </select>
+                    </div>
+                    
+                 
+                    <div class="caja3">
+
+
+                        <h4>2. Antecedentes médicos-patologías</h4>
+                        
+                        <input type="text" class="box" placeholder="Alergias" id="allergy" required>
+                        <input type="text" class="box" placeholder="Medicamentos" id="medicine" required>
+                        
+                    </div>
+                
+                    <div class="caja4">
+                        
+                        <h4>3. Habitos sociales</h4>
+                        
+                        
+                        <h3>Consumo de alcohol</h3>
+                        <select option name="Consumo_de_alcohol">
+                            <option>Frecuente</option>
+                            <option>Ocasional</option>
+                            <option>Social</option>
+                            <option>Regular</option>
+                            <option>Nunca</option>
+                                
+                        </select>
+                    </div>
+                
+                    <div class="caja5"> 
+                        
+                        <h3>Consumo de Consumo_cigarrillo</h3>
+                        
+                        <select option name="Consumo_cigarrillo">
+                            <option>Frecuente</option>
+                            <option>Ocasional</option>
+                            <option>Social</option>
+                            <option>Regular</option>
+                            <option>Nunca</option>
+
+                        </select>
+                    </div>
+                
+                    <div class="caja6">
+                        
+                        <h3>Consumo de sustancias psicoactivas</h3>
+                        
+                        <select option name="Consumo_psicoactivos">
+                            <option>Frecuente</option>
+                            <option>Ocasional</option>
+                            <option>Social</option>
+                            <option>Regular</option>
+                            <option>Nunca</option>
+
+                        </select>
+                    </div>
+
+                    <div class="caja7">
+                        
+                        <h3>Toma el sol-Bronceado</h3>
+                        
+                        <select option name="Bronceado">
+                            <option>Frecuente</option>
+                            <option>Ocasional</option>
+                            <option>Regular</option>
+                            <option>Nunca</option>
+
+                        </select>
+                    </div>
+
+                    <div class="caja8">
+                        
+                        
+                        <h4>4. Estilo de vida</h4>
+                        
+                        
+                        <h3>Consumo de alimentos ricos en grasas</h3>
+                        
+                        <select option name="fat">
+                            <option>Diario</option>
+                            <option>3 a 4 veces/semana</option>
+                            <option>1 a 2 veces/semana</option>
+                            <option>Ocasional</option>
+                            <option>Nunca</option>
+
+                        </select>
+                    </div>
+                    <div class="caja9">
+                        
+                        <h3>Consumo de frutas</h3>
+                        
+                        <select option name="CHOS">
+                            <option>Diario 4 a 5 porciones</option>
+                            <option>Diario 3 a 4 porciones</option>
+                            <option>Diario menos de 3 porciones</option>
+                            <option>Semanal 3 a 4 veces</option>
+                            <option>Ocasional</option>
+                            <option>Nunca</option>
+
+                        </select>
+                    </div>
+                    
+                    <div class="caja10">
+                        
+                        <h3>Consumo de alimentos ricos en CHOS y azucares</h3>
+                        
+
+                        <select option name="CHOS">
+                            <option>Diario</option>
+                            <option>3 a 4 veces/semana</option>
+                            <option>1 a 2 veces/semana</option>
+                            <option>Ocasional</option>
+                            <option>Nunca</option>
+
+                        </select>
+                    </div>
+
+                    <div class="caja11">
+                
+                        
+                        <h3>Actividad fisica</h3>
+                        
+                        <select option name="exercise">
+                            <option>Diario</option>
+                            <option>3 a 4 veces/semana</option>
+                            <option>1 a 2 veces/semana</option>
+                            <option>Ocasional</option>
+                            <option>Nunca</option>
+
+                        </select>
+                    </div>
+
+                    <div class="caja12">
+                        
+                            <h3>Consumo de agua</h3>
+                            
+                        <select option name="water">
+                            <option>Diario 1 lt</option>
+                            <option>Diaria menos de 1 lt</option>
+                            <option>Ocasional</option>
+                            <option>Nunca</option>
+
+                        </select>
+                    </div> 
+                    
+                </div>
+
+                <input type="submit" value="Guardar" class="button" id="btn"/>
+                <input type="reset" value="Restablecer" class="button" id="btn">
+
+            </div>
+        
+        </form>
+
+      </div>
+</body>
+</html>
